@@ -3,168 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>放送告知：防災無線チャイムの世界</title>
+    <title>2026年度シラバス完全攻略ガイド | 成田 啓 プレゼンツ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            /* 背景画像を設定し、ぼかしと固定を適用 */
-            background-image: url('https://thumb.photo-ac.com/86/86854a749c4a002cb2e0c5166759d7b7_t.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        /* 背景全体にぼかしフィルターをかけるための疑似要素 */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* ぼかし効果 */
-            backdrop-filter: blur(20px); 
-            /* 少し暗くして文字を読みやすくする */
-            background-color: rgba(15, 23, 42, 0.6); 
-            z-index: -1;
+        :root {
+            --primary: #4F46E5; /* インディゴ */
+            --accent: #F43F5E;  /* ローズ */
+            --bg: #F8FAFC;
+            --text: #1E293B;
         }
 
-        .font-pop {
-            font-family: 'Zen Maru Gothic', sans-serif;
+        body {
+            font-family: 'M PLUS 1p', 'Noto Sans JP', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
         }
-        .text-shadow-glow {
-            /* 黄色からオレンジ色へ変更 */
-            text-shadow: 0 0 20px rgba(251, 146, 60, 0.6);
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
         }
-        .text-stroke {
-            -webkit-text-stroke: 1px #fff;
-            color: transparent;
+
+        .strategy-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
+
+        .strategy-card:hover {
+            transform: translateY(-5px);
         }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+
+        .highlight-text {
+            color: var(--accent);
+            font-weight: 900;
         }
-        .speaker-waves path {
-            animation: wave 2s infinite;
-            opacity: 0;
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            background-color: #E2E8F0;
         }
-        .speaker-waves path:nth-child(1) { animation-delay: 0s; }
-        .speaker-waves path:nth-child(2) { animation-delay: 0.5s; }
-        .speaker-waves path:nth-child(3) { animation-delay: 1s; }
-        
-        @keyframes wave {
-            0% { opacity: 0; transform: translateX(0); }
-            50% { opacity: 1; transform: translateX(5px); }
-            100% { opacity: 0; transform: translateX(10px); }
+
+        .taipa-badge {
+            background-color: #FEF3C7;
+            color: #92400E;
+            border: 1px solid #F59E0B;
+        }
+
+        .timetable {
+            border-collapse: separate;
+            border-spacing: 4px;
+        }
+
+        .timetable td {
+            border-radius: 8px;
+            transition: all 0.2s;
         }
     </style>
 </head>
-<body class="text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+<body class="antialiased">
 
-    <!-- Main Content Container -->
-    <main class="relative z-10 w-full max-w-4xl px-4 py-12 flex flex-col items-center space-y-8">
-        
-        <!-- Header / Label -->
-        <div class="bg-orange-500 text-white font-bold px-6 py-1 rounded-full text-sm md:text-base tracking-widest uppercase shadow-lg animate-bounce">
-            On Air Info
-        </div>
-
-        <!-- Main Heading Area -->
-        <div class="text-center space-y-2">
-            <!-- 上部のテキストを強調 -->
-            <div class="font-bold tracking-wide leading-relaxed">
-                <span class="block text-white text-base md:text-xl mb-1">あの人気番組</span>
-                <span class="block text-2xl md:text-4xl text-yellow-300 font-black text-shadow-glow">
-                    「マツコの知らない世界」に<br class="md:hidden"/>出演決定！
-                </span>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 px-6 md:py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-block bg-white/20 backdrop-blur-md px-4 py-1 rounded-full mb-6 font-bold text-sm tracking-widest uppercase">
+                Fukushima University 2026 Syllabus
             </div>
-            
-            <div class="py-2 relative flex items-center justify-center">
-                <!-- Left Speaker Removed -->
-
-                <!-- タイトル -->
-                <h1 class="font-pop text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-white to-orange-300 text-shadow-glow leading-tight z-10">
-                    防災無線<br class="md:hidden"/>チャイムの世界
-                </h1>
-
-                <!-- Decorative Icon Right (Keep) -->
-                <svg class="w-10 h-10 md:w-16 md:h-16 absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 text-orange-400 opacity-80 speaker-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                </svg>
-            </div>
-            
-            <p class="text-gray-200 text-sm md:text-lg max-w-lg mx-auto leading-relaxed pt-2">
-                夕暮れの街に響くあのメロディ。<br>
-                知られざる音色の魅力と奥深い世界をマツコさんに熱弁！
+            <h1 class="text-4xl md:text-7xl font-black mb-8 leading-tight tracking-tighter">
+                戦略的シラバス採択で<br>
+                <span class="text-yellow-300">GPAを劇的に向上</span>させる
+            </h1>
+            <p class="text-xl md:text-2xl font-bold opacity-90 max-w-2xl mx-auto mb-10">
+                「ただ受講するだけではもったいない。」<br>
+                行政政策学類・成田 啓が贈る、究極の履修ハック。
             </p>
-        </div>
-
-        <!-- Date & Time Card -->
-        <div class="w-full max-w-3xl bg-black/30 backdrop-blur-md border border-orange-500/30 rounded-2xl p-4 md:p-6 text-center shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
-            <!-- flex-row and flex-nowrap to prevent line breaks -->
-            <div class="flex flex-row flex-nowrap justify-center items-center gap-3 md:gap-8 whitespace-nowrap">
-                
-                <!-- Date -->
-                <div class="text-sm sm:text-xl md:text-4xl font-black text-white">
-                    11月25日
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <div class="bg-white text-indigo-600 px-8 py-4 rounded-2xl font-black text-lg shadow-xl">
+                    目標単位：16単位
                 </div>
-                
-                <!-- Day -->
-                <div class="text-sm sm:text-xl md:text-4xl font-black text-orange-400">
-                    火曜日
-                </div>
-
-                <!-- Time (Changed to include "放送") -->
-                <div class="text-sm sm:text-xl md:text-4xl font-black text-white">
-                    20:55 <span class="text-xs md:text-2xl font-bold ml-1">放送</span>
+                <div class="bg-indigo-900/40 backdrop-blur-md text-white px-8 py-4 rounded-2xl font-black text-lg border border-white/30">
+                    ターゲット：S評価量産
                 </div>
             </div>
         </div>
+        <!-- Decorative shapes -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
+    </section>
 
-        <!-- Video Section -->
-        <div class="w-full max-w-3xl space-y-4">
-            <div class="flex items-center space-x-2 text-orange-300 font-bold text-lg md:text-xl">
-                <svg class="w-6 h-6 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
-                <span>予告動画をチェック！</span>
+    <!-- Narita's Profile & Concept -->
+    <section class="py-20 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+            <span class="text-indigo-600 font-black tracking-widest uppercase">Concept</span>
+            <h2 class="text-4xl font-black mt-2 mb-6">成田 啓の「タイパ」至上主義</h2>
+            <div class="space-y-4 text-gray-600 text-lg">
+                <p>
+                    2026年度前期シラバスを徹底分析した結果、卒業要件の充足とGPAの戦略的向上を両立する<span class="highlight-text text-indigo-600">「黄金の16単位」</span>を導き出しました。
+                </p>
+                <p>
+                    私の採択基準はシンプルです。<b>「労力対効果（タイパ）」</b>が最大化されているか。そして、将来の卒業研究へ向けて<b>「最短距離」</b>を走れているか。
+                </p>
+                <p class="bg-indigo-50 border-l-4 border-indigo-600 p-4 italic">
+                    「教務課には『興味関心のため』と説明していますが、本音は『最小の努力でSを取る』ことです。」
+                </p>
             </div>
-            
-            <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black">
-                <iframe 
-                    class="w-full h-full"
-                    src="https://www.youtube.com/embed/MvVjqLeYNfk?start=12" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+        </div>
+        <div class="strategy-card p-8 bg-indigo-50 border-2 border-indigo-100">
+            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                <span class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">!</span>
+                今期の採択ステータス
+            </h3>
+            <ul class="space-y-6">
+                <li class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="text-gray-500 font-bold">履修予定単位</span>
+                    <span class="text-3xl font-black text-indigo-600">16 <small class="text-sm">単位</small></span>
+                </li>
+                <li class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="text-gray-500 font-bold">戦略枠科目</span>
+                    <span class="text-3xl font-black text-rose-500">2 <small class="text-sm">科目</small></span>
+                </li>
+                <li class="flex justify-between items-end border-b border-gray-200 pb-2">
+                    <span class="text-gray-500 font-bold">卒業残単位</span>
+                    <span class="text-3xl font-black text-gray-800">5 <small class="text-sm">単位</small></span>
+                </li>
+            </ul>
+            <div class="mt-8 text-center">
+                <span class="badge bg-green-100 text-green-700">卒業要件ほぼ充足見込み</span>
             </div>
-            <p class="text-center text-gray-400 text-xs md:text-sm">※動画は12秒付近から始まります</p>
         </div>
+    </section>
 
-        <!-- CTA Button -->
-        <div class="pt-6">
-            <a href="https://www.tbs.co.jp/matsuko-sekai/" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-red-600 font-pop rounded-full hover:bg-red-700 hover:scale-105 hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] focus:outline-none ring-offset-2 focus:ring-2 ring-red-400">
-                <span class="absolute w-full h-full rounded-full opacity-0 group-hover:animate-ping bg-red-600"></span>
-                <span class="relative flex items-center gap-2 text-lg md:text-xl">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    ぜひご覧ください！
-                </span>
-            </a>
+    <!-- Course Focus -->
+    <section class="bg-white py-20 px-6 border-y border-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4">成田が厳選した「戦略的科目」</h2>
+                <p class="text-gray-500 font-bold">シラバスから読み解く、高評価確定のラインナップ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="strategy-card p-8 flex flex-col border border-gray-100">
+                    <div class="mb-4">
+                        <span class="badge taipa-badge">タイパ重視</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3">ふくしま未来学入門I</h3>
+                    <p class="text-sm text-gray-500 font-bold mb-4">前川 直哉 ほか / オンデマンド形式</p>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">
+                        フルオンデマンド、Web小テストのみで評価。学修負担を最小限に抑えつつ、最高評価(S)を獲得するためのGPAブースター。
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 text-rose-500 font-black text-sm">
+                        → GPA底上げの筆頭候補
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="strategy-card p-8 flex flex-col border border-gray-100">
+                    <div class="mb-4">
+                        <span class="badge taipa-badge">効率特化型</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3">行政と法I</h3>
+                    <p class="text-sm text-gray-500 font-bold mb-4">上床 悠 ほか / 金曜7限</p>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">
+                        ICT機器をフル活用し、スライド配信も充実。過去の実績から、出席に対する柔軟性が高く、試験対策に集中できる要衝科目。
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 text-indigo-600 font-black text-sm">
+                        → 労力対効果：極大
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="strategy-card p-8 flex flex-col border border-gray-100">
+                    <div class="mb-4">
+                        <span class="badge bg-indigo-100 text-indigo-700">卒業必修</span>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3">協働演習 ・II</h3>
+                    <p class="text-sm text-gray-500 font-bold mb-4">阿部 浩一 / 月曜夜間</p>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">
+                        文化財保存の現状を学ぶ演習。4年次の卒業研究への接続を考え、ここでテーマの土台を固めるのが成田流の王道ルート。
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 text-gray-800 font-black text-sm">
+                        → 研究接続：不可欠
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </main>
+    <!-- Visual Timetable -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-black text-center mb-12">2026年度 前期・成田啓カスタム時間割</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full timetable">
+                <thead>
+                    <tr class="bg-gray-800 text-white text-sm uppercase">
+                        <th class="p-4 rounded-tl-xl">時限</th>
+                        <th class="p-4">月</th>
+                        <th class="p-4">火</th>
+                        <th class="p-4">水</th>
+                        <th class="p-4">木</th>
+                        <th class="p-4 rounded-tr-xl">金</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center font-bold">
+                    <tr>
+                        <td class="p-4 bg-gray-100 text-gray-400 text-xs">2限</td>
+                        <td class="p-4 bg-gray-50"></td>
+                        <td class="p-4 bg-gray-50"></td>
+                        <td class="p-4 bg-gray-50"></td>
+                        <td class="p-4 bg-gray-50"></td>
+                        <td class="p-4 bg-rose-50 border-2 border-rose-200">
+                            <span class="text-xs text-rose-500">オンデマンド</span><br>ふくしま未来学
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 bg-gray-100 text-gray-400 text-xs">6限</td>
+                        <td class="p-4 bg-indigo-600 text-white" rowspan="2">
+                            協働演習<br><small>阿部</small>
+                        </td>
+                        <td class="p-4 bg-white border border-gray-200">社会調査論</td>
+                        <td class="p-4 bg-white border border-gray-200">地域と文化II</td>
+                        <td class="p-4 bg-white border border-gray-200">欧米文化論</td>
+                        <td class="p-4 bg-gray-50"></td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 bg-gray-100 text-gray-400 text-xs">7限</td>
+                        <td class="p-4 bg-white border border-gray-200">地域社会学</td>
+                        <td class="p-4 bg-gray-50"></td>
+                        <td class="p-4 bg-gray-50"></td>
+                        <td class="p-4 bg-indigo-50 border-2 border-indigo-200">
+                            行政と法I
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-bold">
+            <div class="bg-gray-100 p-4 rounded-xl flex items-center">
+                <span class="bg-blue-500 text-white px-2 py-1 rounded mr-3">放送大学</span>
+                日本国憲法 / 社会経済の基礎 (自宅学修)
+            </div>
+            <div class="bg-gray-100 p-4 rounded-xl flex items-center">
+                <span class="bg-green-500 text-white px-2 py-1 rounded mr-3">必修</span>
+                協働演習・卒業研究 (後期接続)
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="w-full py-6 text-center text-white/40 text-sm relative z-10">
-        <p>&copy; 防災無線チャイムの世界 / 放送告知特設ページ</p>
+    <footer class="bg-slate-900 text-white py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-black mb-6">「シラバスを制する者は、学生生活を制する。」</h2>
+            <p class="text-gray-400 mb-8">
+                福島大学 行政政策学類 履修計画策定委員会 (成田 啓)<br>
+                2026.03.28 策定
+            </p>
+            <div class="pt-8 border-t border-gray-800">
+                <p class="text-xs text-gray-500 uppercase tracking-widest">
+                    &copy; 2026 Kei Narita Strategic Curriculum Design. All Rights Reserved.
+                </p>
+            </div>
+        </div>
     </footer>
 
 </body>
 </html>
+
